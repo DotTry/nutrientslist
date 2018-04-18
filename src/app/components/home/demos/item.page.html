@@ -1,0 +1,199 @@
+<ons-toolbar>
+  <div class="left"><ons-back-button>Back</ons-back-button></div>
+  <div class="center">Details</div>
+</ons-toolbar>
+
+
+<div class="page__background"></div>
+<div class="page__content">
+<div
+  class="progress"
+  *ngIf="!loaded"
+>
+  <ons-progress-circular
+    indeterminate
+  >
+  </ons-progress-circular>
+</div>
+<div class="types">
+    <div
+      class="type type-bug">
+        {{ item.name }}
+    </div>
+  </div>
+
+<!--  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">
+        {{ item.nutrients[0].nutrient }}
+      </div>
+      <div class="stat-value">
+        {{ item.nutrients[0].value }} {{ item.nutrients[0].unit }}
+      </div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">
+        {{ item.nutrients[1].nutrient }}
+      </div>
+      <div class="stat-value">
+        {{ item.nutrients[1].value }} {{ item.nutrients[1].unit }}
+      </div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-label">
+        {{ item.nutrients[2].nutrient }}
+      </div>
+      <div class="stat-value">
+        {{ item.nutrients[2].value }} {{ item.nutrients[2].unit }}
+      </div>
+    </div>
+  </div>
+-->
+
+  <section class="nutrition-facts">
+<header>
+  <h1>Nutrition Facts</h1>
+  <p><strong>Serving size <span>{{item.serving}} ({{item.weight}}55)g</span></strong></p>
+</header>
+<table class="main-nutrients">
+  <thead>
+    <tr>
+      <th colspan="4">
+        Amount per serving <br />
+        <strong>Calories</strong><span>{{item.nutrients[1].value}}</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="daily-value">
+      <th colspan="4">
+        <strong>% Daily Value*</strong>
+      </th>
+    </tr>
+    <tr class="br">
+      <th colspan="3">
+        <strong>Total Fat</strong>
+        8g
+      </th>
+      <td>10%
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <th colspan="2">
+        Saturated Fat
+        -g
+      </th>
+      <td>
+        -%
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <th colspan="2">
+        <em>Trans</em> Fat
+        -g
+      </th>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <th colspan="3">
+        <strong>Cholesterol</strong>
+        -mg
+      </th>
+      <td>
+        -%
+      </td>
+    </tr>
+    <tr>
+      <th colspan="3">
+        <strong>Sodium</strong>
+        ---mg
+      </th>
+      <td>
+        -%
+      </td>
+    </tr>
+    <tr>
+      <th colspan="3">
+        <strong>Total Carbohydrate</strong>
+        {{ item.nutrients[2].value }}g
+      </th>
+      <td>
+        --%
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <th colspan="2">
+        Dietary Fiber
+        -g
+      </th>
+      <td>
+        14%
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <th colspan="2">
+        Total Sugars
+        12g
+      </th>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td class="indent">&nbsp;</td>
+      <td class="indent">&nbsp;</td>
+      <th>
+        Includes 10g Added Sugars
+      </th>
+      <td>
+        20%
+      </td>
+    </tr>
+    <tr>
+      <th colspan="3">
+        <strong>Protein</strong>
+        3g
+      </th>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="additional-nutrients">
+  <tbody>
+    <tr>
+      <td>
+        Vit. D 2mcg 10%
+      </td>
+      <td class="spacer">
+        &bull;
+      </td>
+      <td>
+        Calcium 260mg 20%
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Iron 8mg 45%
+      </td>
+      <td class="spacer">
+        &bull;
+      </td>
+      <td>
+        Potas. 235mg 6%
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+    <p class="footnote">The % Daily Value (DV) tells you how much a nutrient in
+a serving of food contributes to a daily diet. 2,000 calories
+      a day is used for general nutrition advice.</p>
+</section>
+  <ons-fab position="bottom right" ripple (click)="alert(item)">+</ons-fab>
+
+</div>

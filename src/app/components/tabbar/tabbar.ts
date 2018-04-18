@@ -13,9 +13,9 @@ export class Tabbar {
   constructor() {
     this.tabs = [
       { path: 'home',       label: 'Home',       },
-      { path: 'forms',      label: 'Forms',      },
-      { path: 'dialogs',    label: 'Dialogs',    },
-      { path: 'animations', label: 'Animations', },
+      // { path: 'forms',      label: 'Forms',      },
+      // { path: 'dialogs',    label: 'Dialogs',    },
+      { path: 'animations', label: 'Cart', },
     ];
     this.material = onsPlatform.isAndroid();
   }

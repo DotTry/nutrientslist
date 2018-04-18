@@ -7,13 +7,14 @@ import {RouterModule} from '@angular/router';
 import {OnsenModule} from 'angular2-onsenui';
 
 import {routing, appRoutingProviders}      from './app.routing';
-import {KitchenSink}                       from './app/kitchen-sink';
+import {listApp}                       from './app/listApp';
 import {Tabbar}                            from './app/components/tabbar/tabbar';
 import {Home}                              from './app/components/home/home';
 import {PullHook}                          from './app/components/home/demos/pull-hook';
 import {LazyRepeat}                        from './app/components/home/demos/lazy-repeat';
 import {Splitter}                          from './app/components/home/demos/splitter';
 import {Fab}                               from './app/components/home/demos/fab';
+import {itemPage}                          from './app/components/home/demos/item.page';
 import {SpeedDial}                         from './app/components/home/demos/speed-dial';
 import {Animations, TempPage}              from './app/components/animations/animations';
 import {Forms}                             from './app/components/forms/forms';
@@ -30,13 +31,14 @@ import {Dialogs, TempDialog, TempPopover}  from './app/components/dialogs/dialog
         routing,
     ],
     declarations: [
-        KitchenSink,
+        listApp,
         Tabbar,
         Home,
         PullHook,
         LazyRepeat,
         Splitter,
         Fab,
+        itemPage,
         SpeedDial,
         Animations,
         TempPage,
@@ -50,6 +52,7 @@ import {Dialogs, TempDialog, TempPopover}  from './app/components/dialogs/dialog
         LazyRepeat,
         Splitter,
         Fab,
+        itemPage,
         SpeedDial,
         TempPage,
         TempDialog,
@@ -60,7 +63,7 @@ import {Dialogs, TempDialog, TempPopover}  from './app/components/dialogs/dialog
         appRoutingProviders,
     ],
     bootstrap: [
-        KitchenSink,
+        listApp,
     ],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA,

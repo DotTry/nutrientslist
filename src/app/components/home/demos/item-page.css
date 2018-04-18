@@ -1,0 +1,294 @@
+.sprite {
+  width: 192px;
+  height: 192px;
+  margin: 0 auto;
+  display: block;
+  image-rendering: pixelated;
+  animation: 0.5s ease-in 0.4s jump;
+  margin-bottom: -10px;
+}
+
+.progress {
+  display: block;
+  margin: 100px auto;
+  width: 42px;
+}
+
+.info {
+  animation: 0.3s ease-in 0s fade;
+}
+
+.caught {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 12px;
+
+  &-label {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &-checkbox {
+    margin-top: -2px;
+    margin-left: 10px;
+  }
+}
+
+.types {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 26px;
+  font-size: 12px;
+  padding: 0 16px;
+  text-align: space-between;
+  border-radius: 1px;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #68a090;
+  margin: 0 6px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.type-normal {
+  background-color: #a8a878;
+}
+
+.type-fire {
+  background-color: #f08030;
+}
+
+.type-fighting {
+  background-color: #c03028;
+}
+
+.type-water {
+  background-color: #6890f0;
+}
+
+.type-flying {
+  background-color: #a890f0;
+}
+
+.type-grass {
+  background-color: #78c850;
+}
+
+.type-poison {
+  background-color: #a040a0;
+}
+
+.type-electric {
+  background-color: #f8d030;
+}
+
+.type-ground {
+  background-color: #e0c068;
+}
+
+.type-psychic {
+  background-color: #f85888;
+}
+
+.type-rock {
+  background-color: #b8a038;
+}
+
+.type-ice {
+  background-color: #98d8d8;
+}
+
+.type-bug {
+  background-color: #a8b820;
+}
+
+.type-dragon {
+  background-color: #7038f8;
+}
+
+.type-ghost {
+  background-color: #705898;
+}
+
+.type-dark {
+  background-color: #705848;
+}
+
+.type-steel {
+  background-color: #b8b8d0;
+}
+
+.type-fairy {
+  background-color: #ee99ac;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 30px;
+}
+
+.stat-label {
+  font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.stat-value {
+  font-size: 16px;
+}
+
+.description {
+	margin: 0 10px;
+	padding: 14px;
+	border: 1px solid black;
+	border-radius: 8px;
+	font-size: 20px;
+	background-color: #fff;
+}
+
+@keyframes jump {
+    0%   {transform: translate3d(0, 0, 0);}
+    25%  {transform: translate3d(0, -6px, 0);}
+    50%  {transform: translate3d(0, 0, 0);}
+    75%  {transform: translate3d(0, -6px, 0);}
+    100% {transform: translate3d(0, 0, 0);}
+}
+
+@keyframes fade {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+
+.image, section {
+  width: 250px;
+  float: left;
+  margin: 20px;
+}
+.nutrition-facts {
+  margin-top: 20px;
+  border: solid 2px #000;
+  display: inline-block;
+  font: normal 10px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0 5px 0;
+  width: 250px;
+}
+.nutrition-facts h1, .nutrition-facts thead, .nutrition-facts strong {
+  font-family: "Arial Black", "Arial Bold", sans-serif;
+  letter-spacing: -0.03em;
+}
+.nutrition-facts h1 {
+  border-bottom: solid 1px #000;
+  font-size: 32px;
+  margin: -3px 0 4px;
+}
+.nutrition-facts header p {
+  font-size: 14px;
+  margin: 2px 0 -3px;
+}
+.nutrition-facts header p strong {
+  font-size: 15px;
+}
+.nutrition-facts header span {
+  float: right;
+}
+.nutrition-facts table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.nutrition-facts table th, .nutrition-facts table td {
+  letter-spacing: -0.03em;
+}
+.nutrition-facts table th {
+  font-weight: normal;
+}
+.nutrition-facts table td {
+  min-width: 1em;
+}
+.nutrition-facts table thead th, .nutrition-facts table tbody th, .nutrition-facts table thead td, .nutrition-facts table tbody td {
+  text-align: left;
+  font-size: 13px;
+  border-top: solid 1px #000;
+  padding: 2px 0 2px;
+}
+.nutrition-facts table thead th.indent, .nutrition-facts table tbody th.indent, .nutrition-facts table thead td.indent, .nutrition-facts table tbody td.indent {
+  border-top: 0;
+}
+.nutrition-facts table thead th strong, .nutrition-facts table tbody th strong {
+  font-family: "Arial Black", "Arial Bold", sans-serif;
+}
+.nutrition-facts table thead td:last-child, .nutrition-facts table tbody td:last-child {
+  text-align: right;
+}
+.nutrition-facts table thead .daily-value th, .nutrition-facts table tbody .daily-value th {
+  font-size: 11px;
+  text-align: right;
+}
+.nutrition-facts table thead td, .nutrition-facts table thead th {
+  border-bottom: solid 4px #000;
+  padding-top: 3px;
+  line-height: 1em;
+}
+.nutrition-facts table thead th strong {
+  font-size: 28px;
+  line-height: 28px;
+}
+.nutrition-facts table thead th span {
+  font-size: 34px;
+  float: right;
+  line-height: 24px;
+}
+.nutrition-facts table.main-nutrients {
+  border-top: solid 10px #000;
+  border-bottom: solid 10px #000;
+  margin-top: 8px;
+}
+.nutrition-facts table.main-nutrients tbody td:last-child {
+  font-family: "Arial Black", "Arial Bold", sans-serif;
+}
+.nutrition-facts table.main-nutrients tbody td:last-child p {
+  text-align: left;
+}
+.nutrition-facts table.additional-nutrients {
+  border-bottom: solid 5px #000;
+}
+.nutrition-facts table.additional-nutrients td .spacer {
+  width: 1em;
+  text-align: center;
+}
+.nutrition-facts table.additional-nutrients td:last-child {
+  font-weight: normal;
+  font-family: arial, sans-serif;
+}
+.nutrition-facts table.voluntary-nutrients {
+  border-bottom: solid 5px #000;
+}
+.nutrition-facts .footnote {
+  font-size: 9px;
+  margin: 6px 0 -3px;
+  padding-left: 1em;
+  position: relative;
+}
+.nutrition-facts .footnote:before {
+  content: '*';
+  position: absolute;
+  left: 0;
+}

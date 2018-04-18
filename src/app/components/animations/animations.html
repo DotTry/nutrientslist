@@ -1,17 +1,54 @@
 <ons-navigator>
 	<ons-page>
 		<ons-toolbar>
-			<div class="center">Animations</div>
+			<div class="center">Cart</div>
 		</ons-toolbar>
 
-		<div class="page__background"></div>
-		<div class="page__content">
+
+		<ons-card>
+    <div class="content">
+
 			<ons-list>
-				<ons-list-header>Page Transitions</ons-list-header>
-				<ons-list-item *ngFor="let animation of animations" (click)="push(animation)">
-					{{animation}}
+				<ons-list-header>Added Items</ons-list-header>
+				<ons-list-item *ngFor="let item of items" (click)="remove(item)">
+					{{item.name}}
 				</ons-list-item>
 			</ons-list>
-		</div>
+    </div>
+
+		<ons-list>
+			<ons-list-header>Total</ons-list-header>
+			<ons-list-item>
+				Total Fat: {{totalFat}}g
+			</ons-list-item>
+			<ons-list-item>
+				Total Energy: {{totalEnergy}} Calories
+			</ons-list-item>
+			<ons-list-item>
+				Total Carbs: {{totalCarbs}}g
+			</ons-list-item>
+		</ons-list>
+
+
+		<ons-list>
+			<ons-list-header>Saved Lists</ons-list-header>
+			<ons-list-item *ngFor="let item of savedList" (click)="changeList(item)">
+				{{item.name}}
+			</ons-list-item>
+		</ons-list>
+
+
+  </ons-card>
+
+
+
+
+
+	<ons-fab position="bottom right" ripple (click)="prompt()">Save</ons-fab>
+
+
+
+
+
 	</ons-page>
 </ons-navigator>

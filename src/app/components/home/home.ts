@@ -7,17 +7,21 @@ import {Splitter} from './demos/splitter';
 import {Fab} from './demos/fab';
 import {SpeedDial} from './demos/speed-dial';
 
+import {ItemService} from './demos/item.service';
+import {listService} from './demos/shoppinglist.service';
+
 @Component({
   selector: 'home',
   templateUrl: 'app/components/home/home.html',
+  providers: [ItemService, listService]
 })
 export class Home {
 
-  constructor(private _navigator : OnsNavigator) {
+  constructor(private _navigator : OnsNavigator, private itemService: ItemService, private list: listService) {
   }
 
   log(){
-    console.log(this._navigator);
+    // console.log(this._navigator);
   }
 
   push(page) {
