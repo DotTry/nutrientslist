@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
 import {OnsNavigator} from 'angular2-onsenui';
 
-import {PullHook} from './demos/pull-hook';
+// import {PullHook} from './demos/pull-hook';
 import {LazyRepeat} from './demos/lazy-repeat';
-import {Splitter} from './demos/splitter';
-import {Fab} from './demos/fab';
-import {SpeedDial} from './demos/speed-dial';
+// import {Splitter} from './demos/splitter';
+// import {Fab} from './demos/fab';
+// import {SpeedDial} from './demos/speed-dial';
 
 import {ItemService} from './demos/item.service';
 import {listService} from './demos/shoppinglist.service';
@@ -25,7 +25,8 @@ export class Home {
   }
 
   push(page) {
-    var component = { PullHook, LazyRepeat, Splitter, Fab, SpeedDial }[page];
+    //var component = { PullHook, LazyRepeat, Splitter, Fab, SpeedDial }[page];
+    var component = {LazyRepeat}[page];
     this._navigator.element.pushPage(component,  {animation: 'fade '}, {})
   }
 

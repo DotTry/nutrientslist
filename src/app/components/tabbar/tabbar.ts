@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {onsPlatform} from 'angular2-onsenui';
 
+//Tabbar component is used to navigate through different menu pages.
 @Component({
   selector: 'tabbar',
   templateUrl: 'app/components/tabbar/tabbar.html',
@@ -10,7 +11,7 @@ export class Tabbar {
   tabs: Array<any>;
   material: boolean;
 
-  constructor() {
+  constructor() { //define routing table to components
     this.tabs = [
       { path: 'home',       label: 'Home',       },
       // { path: 'forms',      label: 'Forms',      },

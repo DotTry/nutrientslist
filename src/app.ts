@@ -10,15 +10,11 @@ import {routing, appRoutingProviders}      from './app.routing';
 import {listApp}                       from './app/listApp';
 import {Tabbar}                            from './app/components/tabbar/tabbar';
 import {Home}                              from './app/components/home/home';
-import {PullHook}                          from './app/components/home/demos/pull-hook';
+
 import {LazyRepeat}                        from './app/components/home/demos/lazy-repeat';
-import {Splitter}                          from './app/components/home/demos/splitter';
-import {Fab}                               from './app/components/home/demos/fab';
+
 import {itemPage}                          from './app/components/home/demos/item.page';
-import {SpeedDial}                         from './app/components/home/demos/speed-dial';
 import {Animations, TempPage}              from './app/components/animations/animations';
-import {Forms}                             from './app/components/forms/forms';
-import {Dialogs, TempDialog, TempPopover}  from './app/components/dialogs/dialogs';
 
 // enableProdMode()
 
@@ -34,29 +30,15 @@ import {Dialogs, TempDialog, TempPopover}  from './app/components/dialogs/dialog
         listApp,
         Tabbar,
         Home,
-        PullHook,
         LazyRepeat,
-        Splitter,
-        Fab,
         itemPage,
-        SpeedDial,
         Animations,
         TempPage,
-        Forms,
-        Dialogs,
-        TempDialog,
-        TempPopover,
     ],
     entryComponents: [
-        PullHook,
         LazyRepeat,
-        Splitter,
-        Fab,
         itemPage,
-        SpeedDial,
         TempPage,
-        TempDialog,
-        TempPopover,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
